@@ -22,10 +22,6 @@ const INTERACTION_IDS = {
         DESCRIPT: 'sumd',
       },
     },
-    REPORT_WRITE: {
-      R_SEND: 'res',
-      R_CANCEL: 'rec',
-    },
   },
 };
 

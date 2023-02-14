@@ -17,6 +17,8 @@ const { help } = require('./src/Messages/help.ms');
 const { helpIT } = require('./src/Interactions/help.it');
 const { sugestInput } = require('./src/Interactions/help.sugest.it');
 const { replySugest } = require('./src/Interactions/help.sugest.md.it');
+const { reportInput } = require('./src/Interactions/help.report.it');
+const { replyReport } = require('./src/Interactions/help.report.md.it');
 
 bot.on(Events.MessageCreate, (message) => {
   welcome(message);
@@ -27,6 +29,8 @@ bot.on(Events.InteractionCreate, async (interaction) => {
   helpIT(interaction);
   sugestInput(interaction);
   replySugest(interaction);
+  reportInput(interaction);
+  replyReport(interaction);
 });
 
 bot.on(Events.ClientReady, () => {

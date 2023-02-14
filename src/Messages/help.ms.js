@@ -1,16 +1,15 @@
 const {
   EmbedBuilder,
   ActionRowBuilder,
-  ButtonBuilder,
   StringSelectMenuBuilder,
 } = require('@discordjs/builders');
-const { ButtonStyle } = require('discord.js');
+
 const { INTERACTION_IDS, COLORS, IMAGES } = require('../constants');
 
 const help = (message) => {
   if (message.content.startsWith('!help')) {
     const embed = new EmbedBuilder()
-      .setColor(COLORS.EMBEDCOLOR1)
+      .setColor(COLORS.EMBEDCOLOR_DEFAULT)
       .setTitle('``❓`` Preciso de ajuda!')
       .setDescription(
         ' Aqui abaixo você terá uma lista de **perguntas frequentes** para selecionar.'
@@ -19,19 +18,26 @@ const help = (message) => {
     const components = new ActionRowBuilder().setComponents(
       new StringSelectMenuBuilder()
         .setCustomId('select')
-        .setPlaceholder('Nothing selected')
+        .setPlaceholder('Nada selecionado')
         .setMaxValues(1)
         .addOptions(
           {
             label: 'Tem uma Sugestão',
             description: 'Algo que pode ser melhorado ou ajusto no bot!',
             value: INTERACTION_IDS.HELP_SELECTMENU.SUGEST_SELECT,
-            emoji: `pencil`,
+            emoji: {
+              name: '📝',
+            },
           },
           {
-            label: ':exclamation: Reporte um bug',
+            label: 'Reporte um bug',
             value: INTERACTION_IDS.HELP_SELECTMENU.REPORT_SELECT,
-            emoji: `pencil`,
+            emoji: { name: '❗' },
+          },
+          {
+            label: 'Dúvida com comandos',
+            value: INTERACTION_IDS.HELP_SELECTMENU.COMMANDS_SELECT,
+            emoji: { name: '⚙' },
           }
         )
     );

@@ -1,20 +1,6 @@
 const dotenv = require('dotenv').config();
-const {
-  ActionRowBuilder,
-  ButtonBuilder,
-  AttachmentBuilder,
-  StringSelectMenuBuilder,
-} = require('@discordjs/builders');
-const {
-  Client,
-  GatewayIntentBits,
-  Events,
-  ButtonStyle,
-  InteractionType,
-  ComponentType,
-  EmbedBuilder,
-  MessageManager,
-} = require('discord.js');
+
+const { Client, GatewayIntentBits, Events } = require('discord.js');
 
 const bot = new Client({
   intents: [
@@ -25,16 +11,23 @@ const bot = new Client({
 });
 
 // Imports
-const { INTERACTION_IDS, COLORS, IMAGES } = require('./src/constants');
+
 const { welcome } = require('./src/Messages/welcome.ms');
 const { help } = require('./src/Messages/help.ms');
+const { helpIT } = require('./src/Interactions/help.it');
+const { sugestInput } = require('./src/Interactions/help.sugest.it');
+const { replySugest } = require('./src/Interactions/help.sugest.md.it');
 
 bot.on(Events.MessageCreate, (message) => {
   welcome(message);
   help(message);
 });
 
-bot.on(Events.InteractionCreate, async (interaction) => {});
+bot.on(Events.InteractionCreate, async (interaction) => {
+  helpIT(interaction);
+  sugestInput(interaction);
+  replySugest(interaction);
+});
 
 bot.on(Events.ClientReady, () => {
   console.log('✅ Bot on!', bot.user.username);

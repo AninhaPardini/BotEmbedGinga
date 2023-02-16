@@ -9,7 +9,7 @@ const commandsReply = async (interaction) => {
       .setColor(COLORS.EMBEDCOLOR_GRAY)
       .setTitle('``✏`` Como criar um bolão?')
       .setDescription(
-        'Para criar uma liga é só digitar </settingsleaguenew:1017241922546454530>\n\nCom isso, defina em ``"name"`` o nome da sua liga e em ``"championship"`` selecione o campeonato.'
+        'Para criar uma liga é só digitar </settings_leaguenew:1017241922546454530>\n\nCom isso, defina em ``"name"`` o nome da sua liga e em ``"championship"`` selecione o campeonato.'
       );
     const components = new ActionRowBuilder().setComponents(
       new ButtonBuilder()
@@ -30,7 +30,7 @@ const commandsReply = async (interaction) => {
       .setColor(COLORS.EMBEDCOLOR_GRAY)
       .setTitle('``👤`` Como definir ADM para o bolão?')
       .setDescription(
-        'Para adicionar um moderador a liga é só digitar </settingsadd-mod:1017241922546454530> e para remover basta digitar </settingsrem-mod:1017241922546454530>\n\nEm ambos os comandos você deve selecionar o cargo que irá receber ou remover a moderação da liga.'
+        'Para adicionar um moderador a liga é só digitar </settings_add-mod:1017241922546454530> e para remover basta digitar </settingsrem-mod:1017241922546454530>\n\nEm ambos os comandos você deve selecionar o cargo que irá receber ou remover a moderação da liga.'
       );
     const components = new ActionRowBuilder().setComponents(
       new ButtonBuilder()
@@ -51,7 +51,7 @@ const commandsReply = async (interaction) => {
       .setColor(COLORS.EMBEDCOLOR_GRAY)
       .setTitle('``🔄`` Como atualizar o ranking?')
       .setDescription(
-        'Para atualizar os jogos, resultados e ranking, é só digitar </admupdatechannels:1029922265590149201>'
+        'Para atualizar os jogos, resultados e ranking, é só digitar </admin_update_channels:1029922265590149201>'
       );
     const components = new ActionRowBuilder().setComponents(
       new ButtonBuilder()

@@ -23,7 +23,7 @@ const welcome = (message) => {
         .setLabel('Instalar')
         .setStyle(ButtonStyle.Link)
         .setURL(
-          'https://cdn.discordapp.com/attachments/1073238163746717717/1075814642082922577/image.png'
+          'https://discord.com/oauth2/authorize?client_id=1017239151902474252&permissions=8&scope=bot'
         )
     );
     return message.channel.send({

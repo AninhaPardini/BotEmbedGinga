@@ -42,7 +42,7 @@ const COLORS = {
 
 const IMAGES = {
   WELCOMEIMG:
-    'https://media.discordapp.net/attachments/1073238163746717717/1075024157697376328/image.png',
+    'https://cdn.discordapp.com/attachments/1073238163746717717/1075814642082922577/image.png',
 };
 
 module.exports = { INTERACTION_IDS, COLORS, IMAGES };

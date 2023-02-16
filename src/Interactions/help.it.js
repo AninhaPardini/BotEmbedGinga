@@ -1,9 +1,9 @@
 const { ActionRowBuilder } = require('@discordjs/builders');
 const { INTERACTION_IDS, COLORS } = require('../constants');
 const { ButtonStyle, EmbedBuilder, ButtonBuilder } = require('discord.js');
+const { helpCommandsList } = require('./help.commands.it');
 
 const helpIT = async (interaction) => {
-  console.log(interaction);
   const selected = interaction.isSelectMenu() ? interaction.values[0] : false;
 
   if (selected === INTERACTION_IDS.HELP_SELECTMENU.SUGEST_SELECT) {
@@ -18,11 +18,11 @@ const helpIT = async (interaction) => {
       new ButtonBuilder()
         .setCustomId(INTERACTION_IDS.HELP_SELECTMENU.SUGEST_WRITE.S_SEND)
         .setLabel('Escrever')
-        .setStyle(ButtonStyle.Success),
-      new ButtonBuilder()
+        .setStyle(ButtonStyle.Success)
+      /*  new ButtonBuilder()
         .setCustomId(INTERACTION_IDS.HELP_SELECTMENU.SUGEST_WRITE.S_CANCEL)
         .setLabel('Voltar')
-        .setStyle(ButtonStyle.Secondary)
+        .setStyle(ButtonStyle.Secondary) */
     );
 
     await interaction.reply({
@@ -42,11 +42,11 @@ const helpIT = async (interaction) => {
       new ButtonBuilder()
         .setCustomId(INTERACTION_IDS.HELP_SELECTMENU.REPORT_WRITE.R_SEND)
         .setLabel('Reportar')
-        .setStyle(ButtonStyle.Primary),
-      new ButtonBuilder()
+        .setStyle(ButtonStyle.Danger)
+      /* new ButtonBuilder()
         .setCustomId(INTERACTION_IDS.HELP_SELECTMENU.REPORT_WRITE.R_CANCEL)
         .setLabel('Voltar')
-        .setStyle(ButtonStyle.Secondary)
+        .setStyle(ButtonStyle.Secondary) */
     );
 
     await interaction.reply({
@@ -54,6 +54,8 @@ const helpIT = async (interaction) => {
       embeds: [embed],
       components: [component],
     });
+  } else if (selected === INTERACTION_IDS.HELP_SELECTMENU.COMMANDS_SELECT) {
+    helpCommandsList(interaction);
   }
 };
 

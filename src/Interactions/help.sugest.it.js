@@ -45,14 +45,7 @@ const sugestInput = async (interaction) => {
 
     // Show the modal to the user
     await interaction.showModal(modal);
-  } /* else if (
-    interaction.isButton() &&
-    interaction.customId ===
-      INTERACTION_IDS.HELP_SELECTMENU.SUGEST_WRITE.S_CANCEL
-  ) {
-    const message = await interaction.fetchReply();
-    await message.deleteReply();
-  } */
+  }
 };
 
 module.exports = { sugestInput };

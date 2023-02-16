@@ -24,13 +24,17 @@ const replySugest = async (interaction) => {
       .setColor(COLORS.EMBEDCOLOR_WHITE)
       .setTitle(title)
       .setDescription(description)
+      .addFields({
+        name: 'Sugestão feita por:',
+        value: `<@${interaction.user.id}>`,
+      })
       .setThumbnail(
         `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=256`
-      );
+      )
+      .setTimestamp();
 
     await channel
       .send({
-        content: `<@${interaction.user.id}> fez uma sugestão para o ginga bot, reaja com "⏫" se gostou da ideia!\n`,
         embeds: [embed],
         components: [],
         fetchReply: true,

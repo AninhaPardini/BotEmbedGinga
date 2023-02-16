@@ -12,7 +12,6 @@ const INTERACTION_IDS = {
       },
     },
     SUGEST_SELECT: 'su',
-    COMMANDS_SELECT: 'co',
     SUGEST_WRITE: {
       S_SEND: 'sus',
       S_CANCEL: 'suc',
@@ -21,6 +20,13 @@ const INTERACTION_IDS = {
         TITLE: 'sumt',
         DESCRIPT: 'sumd',
       },
+    },
+    COMMANDS_SELECT: 'co',
+    COMMANDS_OPTION: 'cop',
+    COMMANDS_OPTIONS: {
+      ASKCREATE: 'acr',
+      ASKADM: 'aac',
+      ASKUPRANK: 'aucr',
     },
   },
 };
@@ -31,6 +37,7 @@ const COLORS = {
   EMBEDCOLOR_RED: 0xee0000,
   EMBEDCOLOR_YELLOW: 0xfdd528,
   EMBEDCOLOR_WHITE: 0xb2b2b2,
+  EMBEDCOLOR_GRAY: 0x202529,
 };
 
 const IMAGES = {

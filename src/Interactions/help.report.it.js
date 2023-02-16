@@ -13,7 +13,7 @@ const reportInput = async (interaction) => {
   ) {
     const modal = new ModalBuilder()
       .setCustomId(INTERACTION_IDS.HELP_SELECTMENU.REPORT_WRITE.R_SEND_MODAL)
-      .setTitle('Deixe sua sujestão!');
+      .setTitle('Mande o seu report!');
 
     // Add components to modal
 
@@ -23,7 +23,7 @@ const reportInput = async (interaction) => {
         INTERACTION_IDS.HELP_SELECTMENU.REPORT_WRITE.REPORT_MODAL.TITLE
       )
       // The label is the prompt the user sees for this input
-      .setLabel('Título da sua REPORTão:')
+      .setLabel('Título do seu report ou bug:')
       // Short means only a single line of text
       .setStyle(TextInputStyle.Short);
 
@@ -31,7 +31,7 @@ const reportInput = async (interaction) => {
       .setCustomId(
         INTERACTION_IDS.HELP_SELECTMENU.REPORT_WRITE.REPORT_MODAL.DESCRIPT
       )
-      .setLabel('Descreva a sua solução:')
+      .setLabel('Descreva o report ou bug:')
       // Paragraph means multiple lines of text.
       .setStyle(TextInputStyle.Paragraph);
 

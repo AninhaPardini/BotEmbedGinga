@@ -19,6 +19,9 @@ const { sugestInput } = require('./src/Interactions/help.sugest.it');
 const { replySugest } = require('./src/Interactions/help.sugest.md.it');
 const { reportInput } = require('./src/Interactions/help.report.it');
 const { replyReport } = require('./src/Interactions/help.report.md.it');
+const { helpCommandsList } = require('./src/Interactions/help.commands.it');
+const { commandsReply } = require('./src/Interactions/help.commands.rp');
+const { backCommandsHub } = require('./src/Interactions/help.commands.b');
 
 bot.on(Events.MessageCreate, (message) => {
   welcome(message);
@@ -31,6 +34,9 @@ bot.on(Events.InteractionCreate, async (interaction) => {
   replySugest(interaction);
   reportInput(interaction);
   replyReport(interaction);
+  /* helpCommandsList(interaction); */
+  commandsReply(interaction);
+  backCommandsHub(interaction);
 });
 
 bot.on(Events.ClientReady, () => {

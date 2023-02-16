@@ -23,7 +23,7 @@ const help = (message) => {
         .addOptions(
           {
             label: 'Tem uma Sugestão',
-            description: 'Algo que pode ser melhorado ou ajusto no bot!',
+            description: 'Algo que pode ser melhorado ou ajuste no bot!',
             value: INTERACTION_IDS.HELP_SELECTMENU.SUGEST_SELECT,
             emoji: {
               name: '📝',

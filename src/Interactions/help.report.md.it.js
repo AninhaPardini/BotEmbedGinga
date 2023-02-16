@@ -26,11 +26,15 @@ const replyReport = async (interaction) => {
       .setDescription(description)
       .setThumbnail(
         `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=256`
-      );
+      )
+      .addFields({
+        name: 'Report feito por:',
+        value: `<@${interaction.user.id}>`,
+      })
+      .setTimestamp();
 
     await channel
       .send({
-        content: `<@${interaction.user.id}> fez um report para o ginga bot.\n`,
         embeds: [embed],
         components: [],
         fetchReply: true,

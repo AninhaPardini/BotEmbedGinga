@@ -4,7 +4,9 @@ const { ButtonStyle, EmbedBuilder, ButtonBuilder } = require('discord.js');
 const { helpCommandsList } = require('./help.commands.it');
 
 const helpIT = async (interaction) => {
-  const selected = interaction.isSelectMenu() ? interaction.values[0] : false;
+  const selected = interaction.isStringSelectMenu()
+    ? interaction.values[0]
+    : false;
 
   if (selected === INTERACTION_IDS.HELP_SELECTMENU.SUGEST_SELECT) {
     const embed = new EmbedBuilder()

@@ -3,7 +3,9 @@ const { EmbedBuilder, ActionRowBuilder } = require('@discordjs/builders');
 const { ButtonBuilder, ButtonStyle } = require('discord.js');
 
 const commandsReply = async (interaction) => {
-  const selected = interaction.isSelectMenu() ? interaction.values[0] : false;
+  const selected = interaction.isStringSelectMenu()
+    ? interaction.values[0]
+    : false;
   if (selected === INTERACTION_IDS.HELP_SELECTMENU.COMMANDS_OPTIONS.ASKCREATE) {
     const embed = new EmbedBuilder()
       .setColor(COLORS.EMBEDCOLOR_GRAY)

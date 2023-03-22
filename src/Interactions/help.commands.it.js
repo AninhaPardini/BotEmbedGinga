@@ -11,7 +11,7 @@ const helpCommandsList = async (interaction) => {
     .setTitle('``⚙`` Dúvida com comandos')
     .setDescription(
       'Está com dificuldade em usar os comandos do nosso bot? **Selecione abaixo** se houver algum tópico que se encaixe com o que precisa!'
-    );
+    ); 
 
   const components = new ActionRowBuilder().addComponents(
     new StringSelectMenuBuilder()

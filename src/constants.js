@@ -27,6 +27,7 @@ const INTERACTION_IDS = {
       ASKCREATE: 'acr',
       ASKADM: 'aac',
       ASKUPRANK: 'aucr',
+      ASKLANG: 'ala',
     },
   },
 };

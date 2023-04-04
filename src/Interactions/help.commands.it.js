@@ -10,8 +10,8 @@ const helpCommandsList = async (interaction) => {
     .setColor(COLORS.EMBEDCOLOR_GRAY)
     .setTitle('``⚙`` Dúvida com comandos')
     .setDescription(
-      'Está com dificuldade em usar os comandos do nosso bot? **Selecione abaixo** se houver algum tópico que se encaixe com o que precisa!'
-    ); 
+      'Está com dificuldade em usar os comandos do nosso bot? **Selecione abaixo** se houver algum tópico que se encaixe com o que precisa!',
+    );
 
   const components = new ActionRowBuilder().addComponents(
     new StringSelectMenuBuilder()
@@ -39,8 +39,14 @@ const helpCommandsList = async (interaction) => {
           description: 'Comando para atualizar mais rápido as informações...',
           value: INTERACTION_IDS.HELP_SELECTMENU.COMMANDS_OPTIONS.ASKUPRANK,
           emoji: { name: '🔄' },
-        }
-      )
+        },
+        {
+          label: 'Como mudar o idioma?',
+          description: 'As opções de idioma são: PT-BR e EN-US',
+          value: INTERACTION_IDS.HELP_SELECTMENU.COMMANDS_OPTIONS.ASKLANG,
+          emoji: { name: '🌎' },
+        },
+      ),
   );
 
   await interaction.reply({

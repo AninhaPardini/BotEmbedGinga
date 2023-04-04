@@ -11,13 +11,13 @@ const commandsReply = async (interaction) => {
       .setColor(COLORS.EMBEDCOLOR_GRAY)
       .setTitle('``✏`` Como criar um bolão?')
       .setDescription(
-        'Para criar uma liga é só digitar ``/settings league new``\n\nCom isso, defina em ``"name"`` o nome da sua liga e em ``"championship"`` selecione o campeonato.'
+        'Para criar uma liga é só digitar ``/setup``\n\nCom isso, é só clicar em continuar e você será enviado para a configuração da liga.',
       );
     const components = new ActionRowBuilder().setComponents(
       new ButtonBuilder()
         .setCustomId(INTERACTION_IDS.HELP_SELECTMENU.COMMANDS_SELECT)
         .setLabel('Voltar')
-        .setStyle(ButtonStyle.Secondary)
+        .setStyle(ButtonStyle.Secondary),
     );
 
     await interaction.update({
@@ -30,15 +30,17 @@ const commandsReply = async (interaction) => {
   ) {
     const embed = new EmbedBuilder()
       .setColor(COLORS.EMBEDCOLOR_GRAY)
-      .setTitle('``👤`` Como definir ADM para o bolão?')
+      .setTitle(
+        '``👤`` Como definir ADM para o bolão? ``FUNCIONALIDADE EM MANUTENÇÃO``',
+      )
       .setDescription(
-        'Para adicionar um moderador a liga é só digitar ``/settings add-mod`` e para remover basta digitar ``/settings rem-mod``\n\nEm ambos os comandos você deve selecionar o cargo que irá receber ou remover a moderação da liga.'
+        'Para adicionar um moderador a liga é só digitar ``/settings`` e para remover basta clicar em ``Moderação``',
       );
     const components = new ActionRowBuilder().setComponents(
       new ButtonBuilder()
         .setCustomId(INTERACTION_IDS.HELP_SELECTMENU.COMMANDS_SELECT)
         .setLabel('Voltar')
-        .setStyle(ButtonStyle.Secondary)
+        .setStyle(ButtonStyle.Secondary),
     );
 
     await interaction.update({
@@ -53,13 +55,13 @@ const commandsReply = async (interaction) => {
       .setColor(COLORS.EMBEDCOLOR_GRAY)
       .setTitle('``🔄`` Como atualizar o ranking?')
       .setDescription(
-        'Para atualizar os jogos, resultados e ranking, é só digitar ``/admin update channels``'
+        'Para atualizar os jogos, resultados e ranking, é só digitar ``/admin update channels``',
       );
     const components = new ActionRowBuilder().setComponents(
       new ButtonBuilder()
         .setCustomId(INTERACTION_IDS.HELP_SELECTMENU.COMMANDS_SELECT)
         .setLabel('Voltar')
-        .setStyle(ButtonStyle.Secondary)
+        .setStyle(ButtonStyle.Secondary),
     );
 
     await interaction.update({

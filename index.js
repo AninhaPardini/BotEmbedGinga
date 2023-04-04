@@ -21,7 +21,7 @@ const { reportInput } = require('./src/Interactions/help.report.it');
 const { replyReport } = require('./src/Interactions/help.report.md.it');
 const { helpCommandsList } = require('./src/Interactions/help.commands.it');
 const { commandsReply } = require('./src/Interactions/help.commands.rp');
-const { backCommandsHub } = require('./src/Interactions/help.commands.b');
+const { INTERACTION_IDS } = require('./src/constants');
 
 bot.on(Events.MessageCreate, (message) => {
   welcome(message);
@@ -29,14 +29,44 @@ bot.on(Events.MessageCreate, (message) => {
 });
 
 bot.on(Events.InteractionCreate, async (interaction) => {
-  helpIT(interaction);
-  sugestInput(interaction);
-  replySugest(interaction);
-  reportInput(interaction);
-  replyReport(interaction);
-  /* helpCommandsList(interaction); */
-  commandsReply(interaction);
-  backCommandsHub(interaction);
+  if (interaction.isModalSubmit()) {
+    replyReport(interaction);
+    replySugest(interaction);
+  }
+
+  if (interaction.isAnySelectMenu()) {
+    const selected = interaction.isStringSelectMenu()
+      ? interaction.values[0]
+      : false;
+
+    switch (selected) {
+      case INTERACTION_IDS.HELP_SELECTMENU.COMMANDS_SELECT:
+      case INTERACTION_IDS.HELP_SELECTMENU.REPORT_SELECT:
+      case INTERACTION_IDS.HELP_SELECTMENU.SUGEST_SELECT:
+        helpIT(interaction);
+        break;
+
+      case INTERACTION_IDS.HELP_SELECTMENU.COMMANDS_OPTIONS.ASKCREATE:
+      case INTERACTION_IDS.HELP_SELECTMENU.COMMANDS_OPTIONS.ASKADM:
+      case INTERACTION_IDS.HELP_SELECTMENU.COMMANDS_OPTIONS.ASKUPRANK:
+      case INTERACTION_IDS.HELP_SELECTMENU.COMMANDS_OPTIONS.ASKLANG:
+        commandsReply(interaction);
+        break;
+      default:
+        helpCommandsList(interaction); //lista ajuda comandos
+    }
+  }
+
+  if (interaction.isButton()) {
+    if (
+      interaction.customId === INTERACTION_IDS.HELP_SELECTMENU.COMMANDS_SELECT
+    ) {
+      helpCommandsList(interaction); //lista ajuda comandos
+    } else {
+      sugestInput(interaction); //modal sugestao
+      reportInput(interaction); // modal report
+    }
+  }
 });
 
 bot.on(Events.ClientReady, () => {

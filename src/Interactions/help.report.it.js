@@ -20,7 +20,7 @@ const reportInput = async (interaction) => {
     // Create the text input components
     const TitleSugest = new TextInputBuilder()
       .setCustomId(
-        INTERACTION_IDS.HELP_SELECTMENU.REPORT_WRITE.REPORT_MODAL.TITLE
+        INTERACTION_IDS.HELP_SELECTMENU.REPORT_WRITE.REPORT_MODAL.TITLE,
       )
       // The label is the prompt the user sees for this input
       .setLabel('Título do seu report ou bug:')
@@ -29,7 +29,7 @@ const reportInput = async (interaction) => {
 
     const DescriptionSugest = new TextInputBuilder()
       .setCustomId(
-        INTERACTION_IDS.HELP_SELECTMENU.REPORT_WRITE.REPORT_MODAL.DESCRIPT
+        INTERACTION_IDS.HELP_SELECTMENU.REPORT_WRITE.REPORT_MODAL.DESCRIPT,
       )
       .setLabel('Descreva o report ou bug:')
       // Paragraph means multiple lines of text.

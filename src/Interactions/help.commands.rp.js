@@ -3,6 +3,9 @@ const { EmbedBuilder, ActionRowBuilder } = require('@discordjs/builders');
 const { ButtonBuilder, ButtonStyle } = require('discord.js');
 
 const commandsReply = async (interaction) => {
+  if (!interaction.isAnySelectMenu()) {
+    return;
+  }
   const selected = interaction.isStringSelectMenu()
     ? interaction.values[0]
     : false;
@@ -22,6 +25,7 @@ const commandsReply = async (interaction) => {
         .setDescription(
           'Para criar uma liga é só digitar ``/setup``\n\nCom isso, é só clicar em continuar e você será enviado para a configuração da liga.',
         );
+      break;
     case INTERACTION_IDS.HELP_SELECTMENU.COMMANDS_OPTIONS.ASKADM:
       embed
         .setTitle(
@@ -30,18 +34,23 @@ const commandsReply = async (interaction) => {
         .setDescription(
           'Para adicionar um moderador a liga é só digitar ``/settings`` e para remover basta clicar em ``Moderação``',
         );
+      break;
     case INTERACTION_IDS.HELP_SELECTMENU.COMMANDS_OPTIONS.ASKUPRANK:
       embed
         .setTitle('``🔄`` Como atualizar o ranking?')
         .setDescription(
           'Para atualizar os jogos, resultados e ranking, é só digitar ``/admin update channels``',
         );
+      break;
     case INTERACTION_IDS.HELP_SELECTMENU.COMMANDS_OPTIONS.ASKLANG:
       embed
         .setTitle('``🌎`` Como mudar o idioma?')
         .setDescription(
           'Para mudar o idioma basta ir em ``/settings`` e em **editar preferências** escolher **idioma**.',
         );
+      break;
+    default:
+      embed.setTitle('``🌎`` Qualquer coisa').setDescription('aaaa');
   }
   await interaction.update({
     ephemeral: true,

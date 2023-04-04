@@ -49,11 +49,19 @@ const helpCommandsList = async (interaction) => {
       ),
   );
 
-  await interaction.reply({
-    ephemeral: true,
-    embeds: [embed],
-    components: [components],
-  });
+  if (interaction.isButton()) {
+    await interaction.update({
+      ephemeral: true,
+      embeds: [embed],
+      components: [components],
+    });
+  } else {
+    await interaction.reply({
+      ephemeral: true,
+      embeds: [embed],
+      components: [components],
+    });
+  }
 };
 
 module.exports = { helpCommandsList };

@@ -20,6 +20,30 @@ const canva = async (message) => {
       name: 'profile-image.png',
     });
 
+    // Using undici to make HTTP requests for better performance
+    const { body } = await request(
+      interaction.user.displayAvatarURL({ extension: 'jpg' }),
+    );
+    const avatar = await Canvas.loadImage(await body.arrayBuffer());
+
+    // If you don't care about the performance of HTTP requests, you can instead load the avatar using
+    // const avatar = await Canvas.loadImage(interaction.user.displayAvatarURL({ extension: 'jpg' }));
+
+    // Draw a shape onto the main canvas
+    context.drawImage(avatar, 25, 25, 200, 200);
+
+    // Pick up the pen
+    context.beginPath();
+
+    // Start the arc to form a circle
+    context.arc(125, 125, 100, 0, Math.PI * 2, true);
+
+    // Put the pen down
+    context.closePath();
+
+    // Clip off the region you drew on
+    context.clip();
+
     message.reply({ files: [attachment] });
   }
 };

@@ -14,6 +14,7 @@ const bot = new Client({
 
 const { welcome } = require('./src/Messages/welcome.ms');
 const { help } = require('./src/Messages/help.ms');
+const { canva } = require('./src/Interactions/canvas.it');
 const { helpIT } = require('./src/Interactions/help.it');
 const { sugestInput } = require('./src/Interactions/help.sugest.it');
 const { replySugest } = require('./src/Interactions/help.sugest.md.it');
@@ -26,6 +27,7 @@ const { INTERACTION_IDS } = require('./src/constants');
 bot.on(Events.MessageCreate, (message) => {
   welcome(message);
   help(message);
+  canva(message);
 });
 
 bot.on(Events.InteractionCreate, async (interaction) => {

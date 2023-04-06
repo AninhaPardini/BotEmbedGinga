@@ -12,37 +12,46 @@ const canva = async (message) => {
 
     const background = await Canvas.loadImage(bkgImage);
 
-    // This uses the canvas dimensions to stretch the image onto the entire canvas
     context.drawImage(background, 0, 0, canvas.width, canvas.height);
 
-    // Use the helpful Attachment class structure to process the file for you
+    const body = message.author.displayAvatarURL({ extension: 'jpg' });
+    const avatar = await Canvas.loadImage(body);
+
+    // Add an exclamation point here and below
+    context.font = '90px sans-serif';
+    const userNameWidth = context.measureText(message.author.username).width;
+    const userDiscriminatorWidth = context.measureText(
+      message.author.discriminator,
+    ).width;
+    const space = (1141 - (userNameWidth + userDiscriminatorWidth)) / 2 + 20;
+    context.fillStyle = '#292929';
+    context.fillText(`${message.author.username}`, space, 581);
+
+    context.font = '70px sans-serif';
+    context.fillStyle = '#585858';
+    context.fillText(
+      `#${message.author.discriminator}`,
+      space + userNameWidth,
+      580,
+    );
+
+    context.beginPath();
+
+    // X = 428 + (metade de 304 = 152 - tamanho da imagem horizontalmente) = 580
+    // Y = 76 + (metade de 304 = 152 - tamanho da imagem verticalmente) = 228
+    // RADIUS = Metade do tamanho da imagem
+    // Start the arc to form a circle
+    context.arc(580, 228, 152, 0, Math.PI * 2);
+
+    context.closePath();
+
+    context.clip();
+
+    context.drawImage(avatar, 428, 76, 304, 304);
+
     const attachment = new AttachmentBuilder(await canvas.encode('png'), {
       name: 'profile-image.png',
     });
-
-    // Using undici to make HTTP requests for better performance
-    const { body } = await request(
-      interaction.user.displayAvatarURL({ extension: 'jpg' }),
-    );
-    const avatar = await Canvas.loadImage(await body.arrayBuffer());
-
-    // If you don't care about the performance of HTTP requests, you can instead load the avatar using
-    // const avatar = await Canvas.loadImage(interaction.user.displayAvatarURL({ extension: 'jpg' }));
-
-    // Draw a shape onto the main canvas
-    context.drawImage(avatar, 25, 25, 200, 200);
-
-    // Pick up the pen
-    context.beginPath();
-
-    // Start the arc to form a circle
-    context.arc(125, 125, 100, 0, Math.PI * 2, true);
-
-    // Put the pen down
-    context.closePath();
-
-    // Clip off the region you drew on
-    context.clip();
 
     message.reply({ files: [attachment] });
   }

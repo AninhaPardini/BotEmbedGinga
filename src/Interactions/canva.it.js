@@ -20,7 +20,7 @@ const canva = async (message) => {
       name: 'profile-image.png',
     });
 
-    interaction.reply({ files: [attachment] });
+    message.reply({ files: [attachment] });
   }
 };
 

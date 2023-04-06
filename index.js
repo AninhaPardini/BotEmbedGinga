@@ -14,7 +14,7 @@ const bot = new Client({
 
 const { welcome } = require('./src/Messages/welcome.ms');
 const { help } = require('./src/Messages/help.ms');
-const { canva } = require('./src/Interactions/canvas.it');
+const { canva } = require('./src/Interactions/canva.it');
 const { helpIT } = require('./src/Interactions/help.it');
 const { sugestInput } = require('./src/Interactions/help.sugest.it');
 const { replySugest } = require('./src/Interactions/help.sugest.md.it');

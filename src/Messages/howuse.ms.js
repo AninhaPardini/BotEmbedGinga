@@ -12,7 +12,7 @@ const how = (message) => {
       .setColor(COLORS.EMBEDCOLOR_DEFAULT)
       .setTitle('``📚`` Como usar o Ginga?')
       .setDescription(
-        'Este é um tutorial para tirar dúvidas sobre comandos do bot e também contém passo a passo para torcedores iniciantes.\n\n``☝`` Você tem alguma (sugestão)[link] para o nosso bot? Conte pra nós em #sugestao.\n Tem alguma (dúvida)[link]? Verifique o FAQ em #duvidas.\n\nSelecione abaixo a opção de configuração desejada.'
+        'Este é um tutorial para tirar dúvidas sobre comandos do bot e também contém **passo a passo** para torcedores iniciantes.\n\n``☝`` Você tem alguma [sugestão](https://discord.com/channels/1073237981407756319/1073322922636226611) para o nosso bot? Todas as sugestões estão em <#1074824627303485492>.\n Tem alguma [dúvida](https://discord.com/channels/1073237981407756319/1073322922636226611)? Verifique o **FAQ** em <#1073322922636226611>.\n\nSelecione abaixo a **opção de configuração** desejada.'
       );
 
     const components = new ActionRowBuilder().setComponents(

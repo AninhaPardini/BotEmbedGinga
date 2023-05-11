@@ -67,5 +67,11 @@ const how = (message) => {
           }
         )
     );
+    return message.channel.send({
+      components: [components],
+      embeds: [embed],
+    });
   }
 };
+
+module.exports = { how };

@@ -23,11 +23,13 @@ const { replyReport } = require('./src/Interactions/help.report.md.it');
 const { helpCommandsList } = require('./src/Interactions/help.commands.it');
 const { commandsReply } = require('./src/Interactions/help.commands.rp');
 const { INTERACTION_IDS } = require('./src/constants');
+const { how } = require('./src/Messages/howuse.ms');
 
 bot.on(Events.MessageCreate, (message) => {
   welcome(message);
   help(message);
   canva(message);
+  how(message);
 });
 
 bot.on(Events.InteractionCreate, async (interaction) => {

@@ -30,6 +30,15 @@ const INTERACTION_IDS = {
       ASKLANG: 'alk',
     },
   },
+  HOW_SELECTMENU: {
+    OPTION1: 'howo',
+    OPTION2: 'howt',
+    OPTION3: 'howth',
+    OPTION4: 'howfo',
+    OPTION5: 'howfi',
+    OPTION6: 'howsi',
+    OPTION7: 'howse',
+  },
 };
 
 const COLORS = {

@@ -30,7 +30,7 @@ const how = (message) => {
           },
           {
             label: 'Remover liga',
-            description: '',
+
             value: INTERACTION_IDS.HOW_SELECTMENU.OPTION2,
             emoji: { name: '🗑' },
           },
@@ -55,13 +55,13 @@ const how = (message) => {
           },
           {
             label: 'Enviar feedback',
-            description: '',
+
             value: INTERACTION_IDS.HOW_SELECTMENU.OPTION6,
             emoji: { name: '📤' },
           },
           {
             label: 'Mudar idioma',
-            description: '',
+
             value: INTERACTION_IDS.HOW_SELECTMENU.OPTION7,
             emoji: { name: '🌎' },
           }

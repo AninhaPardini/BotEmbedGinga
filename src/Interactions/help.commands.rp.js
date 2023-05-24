@@ -9,7 +9,7 @@ const commandsReply = async (interaction) => {
   const selected = interaction.isStringSelectMenu()
     ? interaction.values[0]
     : false;
-
+  
   const embed = new EmbedBuilder().setColor(COLORS.EMBEDCOLOR_GRAY);
   const components = new ActionRowBuilder().setComponents(
     new ButtonBuilder()

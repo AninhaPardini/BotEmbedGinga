@@ -1,0 +1,25 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "files.autoSave": "afterDelay",
+  "glassit-linux.opacity": 60,
+  "workbench.colorTheme": "Unger Dark",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",
+  "workbench.startupEditor": "none",
+  "editor.mouseWheelZoom": true,
+  "workbench.editor.untitled.hint": "hidden",
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": false,
+    "yaml": false,
+    "plaintex": false,
+    "markdown": false,
+    "python": true,
+    "javascript": true,
+    "html": true
+  },
+  "workbench.productIconTheme": "Default"
+
+}

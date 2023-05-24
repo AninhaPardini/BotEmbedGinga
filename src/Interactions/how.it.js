@@ -1,7 +1,5 @@
-const { ActionRowBuilder } = require('@discordjs/builders');
 const { INTERACTION_IDS, COLORS } = require('../constants');
-const { ButtonStyle, EmbedBuilder, ButtonBuilder } = require('discord.js');
-const { helpCommandsList } = require('./help.commands.it');
+const { optionOne } = require('./how.createLeague.it');
 
 const howIT = async (interaction) => {
   const selected = interaction.isStringSelectMenu()
@@ -9,130 +7,36 @@ const howIT = async (interaction) => {
     : false;
 
   if (selected === INTERACTION_IDS.HOW_SELECTMENU.OPTION1) {
-    const embed = new EmbedBuilder()
-      .setColor()
-      .setTitle()
-      .setDescription()
-      .setImage();
-
-    const component = new ActionRowBuilder();
-
-    await interaction.reply({
-      ephemeral: true,
-      embeds: [embed],
-      components: [component],
-    });
-  } else if (selected === INTERACTION_IDS.HELP_SELECTMENU.REPORT_SELECT) {
-    const embed = new EmbedBuilder()
-      .setColor()
-      .setTitle()
-      .setDescription()
-      .setImage();
-
-    const component = new ActionRowBuilder();
-
-    await interaction.reply({
-      ephemeral: true,
-      embeds: [embed],
-      components: [component],
-    });
+    optionOne(interaction);
   } else if (selected === INTERACTION_IDS.HOW_SELECTMENU.OPTION2) {
-    const embed = new EmbedBuilder()
-      .setColor()
-      .setTitle()
-      .setDescription()
-      .setImage();
-
-    const component = new ActionRowBuilder();
-
     await interaction.reply({
       ephemeral: true,
-      embeds: [embed],
-      components: [component],
+      content: 'Opção 2',
     });
   } else if (selected === INTERACTION_IDS.HOW_SELECTMENU.OPTION3) {
-    const embed = new EmbedBuilder()
-      .setColor()
-      .setTitle()
-      .setDescription()
-      .setImage();
-
-    const component = new ActionRowBuilder();
-
     await interaction.reply({
       ephemeral: true,
-      embeds: [embed],
-      components: [component],
-    });
-  } else if (selected === INTERACTION_IDS.HOW_SELECTMENU.OPTION3) {
-    const embed = new EmbedBuilder()
-      .setColor()
-      .setTitle()
-      .setDescription()
-      .setImage();
-
-    const component = new ActionRowBuilder();
-
-    await interaction.reply({
-      ephemeral: true,
-      embeds: [embed],
-      components: [component],
+      content: 'Opção 3',
     });
   } else if (selected === INTERACTION_IDS.HOW_SELECTMENU.OPTION4) {
-    const embed = new EmbedBuilder()
-      .setColor()
-      .setTitle()
-      .setDescription()
-      .setImage();
-
-    const component = new ActionRowBuilder();
-
     await interaction.reply({
       ephemeral: true,
-      embeds: [embed],
-      components: [component],
+      content: 'Opção 4',
     });
   } else if (selected === INTERACTION_IDS.HOW_SELECTMENU.OPTION5) {
-    const embed = new EmbedBuilder()
-      .setColor()
-      .setTitle()
-      .setDescription()
-      .setImage();
-
-    const component = new ActionRowBuilder();
-
     await interaction.reply({
       ephemeral: true,
-      embeds: [embed],
-      components: [component],
+      content: 'Opção 5',
     });
   } else if (selected === INTERACTION_IDS.HOW_SELECTMENU.OPTION6) {
-    const embed = new EmbedBuilder()
-      .setColor()
-      .setTitle()
-      .setDescription()
-      .setImage();
-
-    const component = new ActionRowBuilder();
-
     await interaction.reply({
       ephemeral: true,
-      embeds: [embed],
-      components: [component],
+      content: 'Opção 6',
     });
   } else if (selected === INTERACTION_IDS.HOW_SELECTMENU.OPTION7) {
-    const embed = new EmbedBuilder()
-      .setColor()
-      .setTitle()
-      .setDescription()
-      .setImage();
-
-    const component = new ActionRowBuilder();
-
     await interaction.reply({
       ephemeral: true,
-      embeds: [embed],
-      components: [component],
+      content: 'Opção 7',
     });
   }
 };

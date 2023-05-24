@@ -31,7 +31,10 @@ const INTERACTION_IDS = {
     },
   },
   HOW_SELECTMENU: {
+    DEFAULT: 'howm',
     OPTION1: 'howo',
+    OPTION1_1: 'howa',
+    OPTION1_2: 'how',
     OPTION2: 'howt',
     OPTION3: 'howth',
     OPTION4: 'howfo',

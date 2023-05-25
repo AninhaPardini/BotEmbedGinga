@@ -24,6 +24,7 @@ const { helpCommandsList } = require('./src/Interactions/help.commands.it');
 const { commandsReply } = require('./src/Interactions/help.commands.rp');
 const { INTERACTION_IDS } = require('./src/constants');
 const { how } = require('./src/Messages/howuse.ms');
+const { howIT } = require('./src/Interactions/how.it');
 
 bot.on(Events.MessageCreate, (message) => {
   welcome(message);
@@ -56,6 +57,8 @@ bot.on(Events.InteractionCreate, async (interaction) => {
       case INTERACTION_IDS.HELP_SELECTMENU.COMMANDS_OPTIONS.ASKLANG:
         commandsReply(interaction);
         break;
+      case INTERACTION_IDS.HOW_SELECTMENU:
+        howIT(interaction);
       default:
         helpCommandsList(interaction); //lista ajuda comandos
     }

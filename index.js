@@ -87,14 +87,14 @@ bot.on(Events.InteractionCreate, async (interaction) => {
 
     if (
       interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION1_1 ||
-      interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.BACKCRELEA
+      INTERACTION_IDS.HOW_SELECTMENU.BACKCRELEA
     ) {
       options1_1(interaction);
       console.log(options1_1(interaction));
       return;
     } else if (
       interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION1_2 ||
-      interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.BACKCRELEA
+      INTERACTION_IDS.HOW_SELECTMENU.BACKCRELEA
     ) {
       options1_2(interaction);
       console.log(options1_2(interaction));

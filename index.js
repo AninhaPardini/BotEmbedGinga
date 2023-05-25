@@ -68,6 +68,7 @@ bot.on(Events.InteractionCreate, async (interaction) => {
       case INTERACTION_IDS.HOW_SELECTMENU.OPTION5:
       case INTERACTION_IDS.HOW_SELECTMENU.OPTION6:
       case INTERACTION_IDS.HOW_SELECTMENU.OPTION7:
+      case INTERACTION_IDS.HOW_SELECTMENU.BACKCRELEA:
         howIT(interaction);
         break;
       default:
@@ -85,16 +86,12 @@ bot.on(Events.InteractionCreate, async (interaction) => {
       reportInput(interaction); // modal report
     }
 
-    if (
-      interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION1_1 ||
-      INTERACTION_IDS.HOW_SELECTMENU.BACKCRELEA
-    ) {
+    if (interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION1_1) {
       options1_1(interaction);
       console.log(options1_1(interaction));
       return;
     } else if (
-      interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION1_2 ||
-      INTERACTION_IDS.HOW_SELECTMENU.BACKCRELEA
+      interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION1_2
     ) {
       options1_2(interaction);
       console.log(options1_2(interaction));

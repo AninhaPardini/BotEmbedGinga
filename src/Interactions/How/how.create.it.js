@@ -1,4 +1,3 @@
-const { ButtonBuilder } = require('@discordjs/builders');
 const { INTERACTION_IDS, COLORS } = require('../../constants');
 const {
   ButtonStyle,

@@ -7,10 +7,7 @@ const {
 const { INTERACTION_IDS, COLORS, IMAGES } = require('../constants');
 
 const how = (message) => {
-  if (
-    message.content.startsWith('!how') ||
-    interaction.id === INTERACTION_IDS.HOW_SELECTMENU.DEFAULT
-  ) {
+  if (message.content.startsWith('!how')) {
     const embed = new EmbedBuilder()
       .setColor(COLORS.EMBEDCOLOR_DEFAULT)
       .setTitle('``📚`` Como usar o Ginga?')

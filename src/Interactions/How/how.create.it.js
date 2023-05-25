@@ -8,6 +8,8 @@ const {
 } = require('discord.js');
 
 const options1Reply = async (interaction) => {
+  const selected = isButton() ? interaction.customId : false;
+
   const embed = new EmbedBuilder().setColor(COLORS.EMBEDCOLOR_DEFAULT);
   const components = new ActionRowBuilder().setComponents(
     new ButtonBuilder()
@@ -16,7 +18,7 @@ const options1Reply = async (interaction) => {
       .setStyle(ButtonStyle.Secondary)
   );
 
-  switch (interaction) {
+  switch (selected) {
     case INTERACTION_IDS.HOW_SELECTMENU.OPTION1_1:
       embed
         .setTitle('`` ➕`` Como criar uma Liga Individual?')

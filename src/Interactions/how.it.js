@@ -6,7 +6,10 @@ const howIT = async (interaction) => {
     ? interaction.values[0]
     : false;
 
-  if (selected === INTERACTION_IDS.HOW_SELECTMENU.OPTION1) {
+  if (
+    selected === INTERACTION_IDS.HOW_SELECTMENU.OPTION1 ||
+    interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.BACKCRELEA
+  ) {
     optionOne(interaction);
   }
 };

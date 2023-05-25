@@ -68,7 +68,6 @@ bot.on(Events.InteractionCreate, async (interaction) => {
       case INTERACTION_IDS.HOW_SELECTMENU.OPTION5:
       case INTERACTION_IDS.HOW_SELECTMENU.OPTION6:
       case INTERACTION_IDS.HOW_SELECTMENU.OPTION7:
-      case INTERACTION_IDS.HOW_SELECTMENU.BACKCRELEA:
         howIT(interaction);
         break;
       default:

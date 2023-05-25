@@ -86,7 +86,7 @@ bot.on(Events.InteractionCreate, async (interaction) => {
 
     if (
       interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION1_1 ||
-      INTERACTION_IDS.HOW_SELECTMENU.OPTION1_2
+      interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION1_2
     ) {
       options1Reply(interaction);
       console.log(options1Reply(interaction));

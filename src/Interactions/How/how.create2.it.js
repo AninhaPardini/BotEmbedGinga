@@ -16,13 +16,10 @@ const options1_2 = async (interaction) => {
     );
 
   const components = new ActionRowBuilder().setComponents(
-    new ButtonBuilder()
-      /* .setCustomId('') */
-      .setLabel('Voltar')
-      .setStyle(ButtonStyle.Secondary)
+    new ButtonBuilder().setLabel('Voltar').setStyle(ButtonStyle.Secondary)
   );
 
-  await interaction.reply({
+  await interaction.update({
     ephemeral: true,
     embeds: [embed],
     components: [components],

@@ -34,7 +34,7 @@ const INTERACTION_IDS = {
     DEFAULT: 'howm',
     OPTION1: 'howo',
     OPTION1_1: 'howa',
-    OPTION1_2: 'how',
+    OPTION1_2: 'howb',
     OPTION2: 'howt',
     OPTION3: 'howth',
     OPTION4: 'howfo',

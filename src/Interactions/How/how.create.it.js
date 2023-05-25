@@ -4,6 +4,7 @@ const {
   EmbedBuilder,
   ButtonBuilder,
   Embed,
+  ActionRowBuilder,
 } = require('discord.js');
 
 const options1Reply = async (interaction) => {

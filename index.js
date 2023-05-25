@@ -57,7 +57,13 @@ bot.on(Events.InteractionCreate, async (interaction) => {
       case INTERACTION_IDS.HELP_SELECTMENU.COMMANDS_OPTIONS.ASKLANG:
         commandsReply(interaction);
         break;
-      case INTERACTION_IDS.HOW_SELECTMENU:
+      case INTERACTION_IDS.HOW_SELECTMENU.OPTION1:
+      case INTERACTION_IDS.HOW_SELECTMENU.OPTION2:
+      case INTERACTION_IDS.HOW_SELECTMENU.OPTION3:
+      case INTERACTION_IDS.HOW_SELECTMENU.OPTION4:
+      case INTERACTION_IDS.HOW_SELECTMENU.OPTION5:
+      case INTERACTION_IDS.HOW_SELECTMENU.OPTION6:
+      case INTERACTION_IDS.HOW_SELECTMENU.OPTION7:
         howIT(interaction);
         break;
       default:

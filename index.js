@@ -59,6 +59,7 @@ bot.on(Events.InteractionCreate, async (interaction) => {
         break;
       case INTERACTION_IDS.HOW_SELECTMENU:
         howIT(interaction);
+        break;
       default:
         helpCommandsList(interaction); //lista ajuda comandos
     }

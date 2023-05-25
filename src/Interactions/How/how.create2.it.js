@@ -3,7 +3,6 @@ const {
   ButtonStyle,
   EmbedBuilder,
   ButtonBuilder,
-  Embed,
   ActionRowBuilder,
 } = require('discord.js');
 
@@ -16,7 +15,10 @@ const options1_2 = async (interaction) => {
     );
 
   const components = new ActionRowBuilder().setComponents(
-    new ButtonBuilder().setLabel('Voltar').setStyle(ButtonStyle.Secondary)
+    new ButtonBuilder()
+      .setLabel('Voltar')
+      .setCustomId('back')
+      .setStyle(ButtonStyle.Secondary)
   );
 
   await interaction.update({

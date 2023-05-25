@@ -14,7 +14,7 @@ const options1_1 = async (interaction) => {
       '### Modo 1:\n\n1. Digite `` /settings ``\n2. Clique em `` Adicionar/Remover Campeonatos >> Adicionar novo ``\n3. Selecione o campeonato desejado >> `` Continuar ``\nAs informações sobre os canais que serão criados serão exibidas:\n4. Clique em `` confirmar ``\nPronto! A sua Liga estará criada!\n\n### Modo 2:\n\n1. Digite `` /setup ``\n2. Clique em `` Continuar ``\n3. Selecione o campeonato desejado >> `` Continuar``\nAs informações sobre os canais que serão criados serão exibidas:\n4. Clique em ``continuar``\nPronto! A sua Liga estará criada!'
     );
   const components = new ActionRowBuilder().setComponents(
-    new ButtonBuilder().setLabel('Voltar').setStyle(ButtonStyle.Secondary)
+    new ButtonBuilder().setCustomId('back').setLabel('Voltar').setStyle(ButtonStyle.Secondary)
   );
 
   await interaction.update({

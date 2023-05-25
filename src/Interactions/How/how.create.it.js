@@ -8,7 +8,7 @@ const {
 } = require('discord.js');
 
 const options1Reply = async (interaction) => {
-  const selected = interaction.isButton() ? interaction.values[0] : false;
+  const selected = interaction.isButton();
 
   const embed = new EmbedBuilder().setColor(COLORS.EMBEDCOLOR_DEFAULT);
   const components = new ActionRowBuilder().setComponents(
@@ -35,11 +35,10 @@ const options1Reply = async (interaction) => {
       break;
   }
 
-  const embed1 = new EmbedBuilder().setColor(COLORS.EMBEDCOLOR_DEFAULT);
-
   await interaction.reply({
     ephemeral: true,
     embeds: [embed],
+    components: [components]
   });
 };
 

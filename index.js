@@ -16,12 +16,14 @@ const { welcome } = require('./src/Messages/welcome.ms');
 const { help } = require('./src/Messages/help.ms');
 const { canva } = require('./src/Interactions/canva.it');
 const { helpIT } = require('./src/Interactions/help.it');
-const { sugestInput } = require('./src/Interactions/help.sugest.it');
-const { replySugest } = require('./src/Interactions/help.sugest.md.it');
-const { reportInput } = require('./src/Interactions/help.report.it');
-const { replyReport } = require('./src/Interactions/help.report.md.it');
-const { helpCommandsList } = require('./src/Interactions/help.commands.it');
-const { commandsReply } = require('./src/Interactions/help.commands.rp');
+const { sugestInput } = require('./src/Interactions/Help/help.sugest.it');
+const { replySugest } = require('./src/Interactions/Help/help.sugest.md.it');
+const { reportInput } = require('./src/Interactions/Help/help.report.it');
+const { replyReport } = require('./src/Interactions/Help/help.report.md.it');
+const {
+  helpCommandsList,
+} = require('./src/Interactions/Help/help.commands.it');
+const { commandsReply } = require('./src/Interactions/Help/help.commands.rp');
 const { INTERACTION_IDS } = require('./src/constants');
 const { how } = require('./src/Messages/howuse.ms');
 const { howIT } = require('./src/Interactions/how.it');

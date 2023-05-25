@@ -1,5 +1,5 @@
 const { INTERACTION_IDS, COLORS } = require('../constants');
-const { optionOne } = require('./how.createLeague.it');
+const { optionOne } = require('./How/how.createLeague.it');
 
 const howIT = async (interaction) => {
   const selected = interaction.isStringSelectMenu()

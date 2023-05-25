@@ -1,5 +1,5 @@
 const { ActionRowBuilder } = require('@discordjs/builders');
-const { INTERACTION_IDS, COLORS } = require('../constants');
+const { INTERACTION_IDS, COLORS } = require('../../constants');
 const { EmbedBuilder } = require('discord.js');
 const { Client, GatewayIntentBits, Events } = require('discord.js');
 

@@ -1,37 +1,37 @@
 const { ActionRowBuilder } = require('@discordjs/builders');
-const { INTERACTION_IDS, COLORS, IMAGES } = require('../constants');
+const { INTERACTION_IDS, COLORS, IMAGES } = require('../../constants');
 const {
   ModalBuilder,
   TextInputBuilder,
   TextInputStyle,
 } = require('discord.js');
 
-const reportInput = async (interaction) => {
+const sugestInput = async (interaction) => {
   if (
     interaction.isButton() &&
-    interaction.customId === INTERACTION_IDS.HELP_SELECTMENU.REPORT_WRITE.R_SEND
+    interaction.customId === INTERACTION_IDS.HELP_SELECTMENU.SUGEST_WRITE.S_SEND
   ) {
     const modal = new ModalBuilder()
-      .setCustomId(INTERACTION_IDS.HELP_SELECTMENU.REPORT_WRITE.R_SEND_MODAL)
-      .setTitle('Mande o seu report!');
+      .setCustomId(INTERACTION_IDS.HELP_SELECTMENU.SUGEST_WRITE.S_SEND_MODAL)
+      .setTitle('Deixe sua sujestão!');
 
     // Add components to modal
 
     // Create the text input components
     const TitleSugest = new TextInputBuilder()
       .setCustomId(
-        INTERACTION_IDS.HELP_SELECTMENU.REPORT_WRITE.REPORT_MODAL.TITLE,
+        INTERACTION_IDS.HELP_SELECTMENU.SUGEST_WRITE.SUGEST_MODAL.TITLE
       )
       // The label is the prompt the user sees for this input
-      .setLabel('Título do seu report ou bug:')
+      .setLabel('Título da sua sugestão:')
       // Short means only a single line of text
       .setStyle(TextInputStyle.Short);
 
     const DescriptionSugest = new TextInputBuilder()
       .setCustomId(
-        INTERACTION_IDS.HELP_SELECTMENU.REPORT_WRITE.REPORT_MODAL.DESCRIPT,
+        INTERACTION_IDS.HELP_SELECTMENU.SUGEST_WRITE.SUGEST_MODAL.DESCRIPT
       )
-      .setLabel('Descreva o report ou bug:')
+      .setLabel('Descreva a sua solução:')
       // Paragraph means multiple lines of text.
       .setStyle(TextInputStyle.Paragraph);
 
@@ -48,4 +48,4 @@ const reportInput = async (interaction) => {
   }
 };
 
-module.exports = { reportInput };
+module.exports = { sugestInput };

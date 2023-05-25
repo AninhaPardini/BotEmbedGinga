@@ -85,14 +85,20 @@ bot.on(Events.InteractionCreate, async (interaction) => {
       reportInput(interaction); // modal report
     }
 
-    if (interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION1_1) {
+    if (
+      interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION1_1 ||
+      interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.BACKCRELEA
+    ) {
       options1_1(interaction);
       console.log(options1_1(interaction));
+      return;
     } else if (
-      interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION1_2
+      interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION1_2 ||
+      interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.BACKCRELEA
     ) {
       options1_2(interaction);
       console.log(options1_2(interaction));
+      return;
     }
   }
 });

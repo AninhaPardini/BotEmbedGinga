@@ -27,6 +27,7 @@ const { commandsReply } = require('./src/Interactions/Help/help.commands.rp');
 const { INTERACTION_IDS } = require('./src/constants');
 const { how } = require('./src/Messages/howuse.ms');
 const { howIT } = require('./src/Interactions/how.it');
+const { options1Reply } = require('./src/Interactions/How/how.create.it');
 
 bot.on(Events.MessageCreate, (message) => {
   welcome(message);
@@ -81,6 +82,13 @@ bot.on(Events.InteractionCreate, async (interaction) => {
     } else {
       sugestInput(interaction); //modal sugestao
       reportInput(interaction); // modal report
+    }
+
+    if (
+      interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION1_1 ||
+      INTERACTION_IDS.HOW_SELECTMENU.OPTION1_2
+    ) {
+      options1Reply(interaction);
     }
   }
 });

@@ -9,7 +9,7 @@ const {
 const options1_1_2 = async (interaction) => {
   const embed = new EmbedBuilder()
     .setColor(COLORS.EMBEDCOLOR_DEFAULT)
-    .setTitle('``➕`` Como criar uma Liga Mista?')
+    .setTitle('`` ➕ `` Como criar uma Liga Mista?')
     .setDescription(
       'Para poder criar uma liga compartilhada:\n\n1. Digite `` /admin league add-championship ``\n2. Selecione a Liga\n3. Selecione o Campeonato\nPronto! O campeonato estará adicionado a sua liga.'
     );

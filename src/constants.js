@@ -42,6 +42,8 @@ const INTERACTION_IDS = {
     OPTION2_1: 'howr',
     BECKREMLEA: 'bacrl',
     OPTION3: 'howth',
+    OPTION3_1: 'howth',
+    OPTION3_1_1: 'howthp',
     OPTION4: 'howfo',
     OPTION5: 'howfi',
     OPTION6: 'howsi',

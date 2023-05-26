@@ -2,24 +2,25 @@ const { ActionRowBuilder } = require('@discordjs/builders');
 const { INTERACTION_IDS, COLORS } = require('../../constants');
 const { ButtonStyle, EmbedBuilder, ButtonBuilder } = require('discord.js');
 
-const option1_2 = async (interaction) => {
+const option1_3 = async (interaction) => {
   const embed = new EmbedBuilder()
     .setColor(COLORS.EMBEDCOLOR_GRAY)
-    .setTitle('`` ➖ `` Como remover uma Liga?')
+    .setTitle('``❔`` Como funciona o bolão?')
     .setDescription(
-      'Para isto, digite /settings e clique em **Adicionar/Remover campeonato > remover** e então escolha o campeonato que deseja retirar.\n\n1. Digite `` /settings ``\n2. Clique em `` Adicionar/Remover Campeonatos ``\n3. Clique em `` Remover ``\n4. Selecione o Campeonato >> `` Continuar ``\nAs informações sobre o campeonato serão exibidas\n5. Clique em `` Confirmar ``\nPronto! Os canais e as informações do campeonato estarão excluídas do seu servidor.'
+      'O bolão é a competição mais conhecida do meio futebolístico e é a principal funcionalidade que foi integrada ao nosso bot, onde pode jogar com seus amigos. Saiba como funciona cada canal e como o bolão se integra a eles:\n\n⚽ `` #partidas `` Você clica no botão **“Palpitar”** para registrar sua previsão de placar.\n✅ `` #resultados `` Confira os resultados das partidas, súmula e estatísticas de erros e acertos de outros jogadores do bolão.\n🏆 `` #ranking `` Acompanhe sua posição no placar do servidor, veja o **top 10** e confira a **sua pontuação** e **últimos palpites**.'
     );
 
   const components = new ActionRowBuilder().setComponents(
     new ButtonBuilder()
       .setCustomId(INTERACTION_IDS.HOW_SELECTMENU.OPTION2_1)
-      .setLabel('Remover campeonato')
+      .setLabel('Como palpitar?')
       .setStyle(ButtonStyle.Primary)
+      .setEmoji('gballemoji:1111733792772739192')
   );
 
   if (
     interaction.isButton() &&
-    interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.BECKREMLEA
+    interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.BACKBOLAO
   ) {
     await interaction.update({
       ephemeral: true,
@@ -35,4 +36,4 @@ const option1_2 = async (interaction) => {
   }
 };
 
-module.exports = { option1_2 };
+module.exports = { option1_3 };

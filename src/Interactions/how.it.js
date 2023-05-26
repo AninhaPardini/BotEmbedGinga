@@ -1,4 +1,5 @@
 const { INTERACTION_IDS, COLORS } = require('../constants');
+const { option1_3 } = require('./How/how.bolao.it');
 const { optionOne } = require('./How/how.createLeague.it');
 const { option1_2 } = require('./How/how.remLeague.it');
 
@@ -16,6 +17,9 @@ const howIT = async (interaction) => {
   } else if (selected === INTERACTION_IDS.HOW_SELECTMENU.OPTION2) {
     option1_2(interaction);
     console.log('Option 1.2');
+  } else if (selected === INTERACTION_IDS.HOW_SELECTMENU.OPTION3) {
+    option1_3(interaction);
+    console.log('Option 1.3');
   }
 };
 

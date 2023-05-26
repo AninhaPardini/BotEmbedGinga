@@ -44,6 +44,8 @@ const INTERACTION_IDS = {
     OPTION3: 'howth',
     OPTION3_1: 'howth',
     OPTION3_1_1: 'howthp',
+    BACKBOLAO: 'howbb',
+    BACKBOLAO3_1: 'howbbb',
     OPTION4: 'howfo',
     OPTION5: 'howfi',
     OPTION6: 'howsi',

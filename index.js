@@ -33,6 +33,7 @@ const { optionOne } = require('./src/Interactions/How/how.createLeague.it');
 const { removeCamp } = require('./src/Interactions/How/how.remove.it');
 const { option1_2 } = require('./src/Interactions/How/how.remLeague.it');
 const { removeCamp2 } = require('./src/Interactions/How/how.remove2.it');
+const { boPick3_1 } = require('./src/Interactions/How/how.bopick.it');
 
 bot.on(Events.MessageCreate, (message) => {
   welcome(message);
@@ -124,10 +125,19 @@ bot.on(Events.InteractionCreate, async (interaction) => {
       interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION2_1
     ) {
       removeCamp2(interaction);
+      console.log('Option Remove Camp 2');
     } else if (
       interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.BECKREMLEA
     ) {
       option1_2(interaction);
+      console.log('Option 1.2');
+    } else if (
+      interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION3_1
+    ) {
+      boPick3_1(interaction);
+      console.log('Option 3.1');
+    } else if (interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION3_1_1) {
+      
     }
   }
 });

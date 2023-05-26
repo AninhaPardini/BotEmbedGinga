@@ -6,7 +6,7 @@ const {
   ActionRowBuilder,
 } = require('discord.js');
 
-const options1_1 = async (interaction) => {
+const options1_1_1 = async (interaction) => {
   const embed = new EmbedBuilder()
     .setColor(COLORS.EMBEDCOLOR_DEFAULT)
     .setTitle('`` ➕ `` Como criar uma Liga Individual?')
@@ -27,4 +27,4 @@ const options1_1 = async (interaction) => {
   });
 };
 
-module.exports = { options1_1 };
+module.exports = { options1_1_1 };

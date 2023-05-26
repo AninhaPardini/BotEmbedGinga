@@ -6,7 +6,7 @@ const {
   ActionRowBuilder,
 } = require('discord.js');
 
-const options1_2 = async (interaction) => {
+const options1_1_2 = async (interaction) => {
   const embed = new EmbedBuilder()
     .setColor(COLORS.EMBEDCOLOR_DEFAULT)
     .setTitle('``➕`` Como criar uma Liga Mista?')
@@ -17,7 +17,7 @@ const options1_2 = async (interaction) => {
   const components = new ActionRowBuilder().setComponents(
     new ButtonBuilder()
       .setLabel('Remover campeonato')
-      .setCustomId('rem')
+      .setCustomId(INTERACTION_IDS.HOW_SELECTMENU.OPTION1_2_1)
       .setStyle(ButtonStyle.Primary),
     new ButtonBuilder()
       .setLabel('Voltar')
@@ -32,4 +32,4 @@ const options1_2 = async (interaction) => {
   });
 };
 
-module.exports = { options1_2 };
+module.exports = { options1_1_2 };

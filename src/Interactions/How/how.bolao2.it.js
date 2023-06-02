@@ -7,7 +7,7 @@ const option1_33 = async (interaction) => {
     .setColor(COLORS.EMBEDCOLOR_GRAY)
     .setTitle('``❔`` Como funciona o bolão?')
     .setDescription(
-      'O bolão é a competição mais conhecida do meio futebolístico e é a principal funcionalidade que foi integrada ao nosso bot, onde pode jogar com seus amigos. Saiba como funciona cada canal e como o bolão se integra a eles:\n\n⚽ `` #partidas `` Você clica no botão **“Palpitar”** para registrar sua previsão de placar.\n✅ `` #resultados `` Confira os resultados das partidas, súmula e estatísticas de erros e acertos de outros jogadores do bolão.\n🏆 `` #ranking `` Acompanhe sua posição no placar do servidor, veja o **top 10** e confira a **sua pontuação** e **últimos palpites**.'
+      'O bolão é a competição mais conhecida do meio futebolístico e é a principal funcionalidade que foi integrada ao nosso bot, onde pode jogar com seus amigos. Saiba como funciona cada canal e como o bolão se integra a eles:\n\n⚽ `` #partidas `` Você clica no botão **“Palpitar”** para registrar sua previsão de placar.\n✅ `` #resultados `` Confira os resultados das partidas, súmula e estatísticas de erros e acertos de outros jogadores do bolão.\n🏆 `` #ranking `` Acompanhe sua posição no placar do servidor, veja o **top 10** e confira a **sua pontuação** e **últimos palpites**.' 
     );
 
   const components = new ActionRowBuilder().setComponents(

@@ -12,7 +12,7 @@ const option1_3 = async (interaction) => {
 
   const components = new ActionRowBuilder().setComponents(
     new ButtonBuilder()
-      .setCustomId(INTERACTION_IDS.HOW_SELECTMENU.OPTION2_1)
+      .setCustomId(INTERACTION_IDS.HOW_SELECTMENU.OPTION3_1)
       .setLabel('Como palpitar?')
       .setStyle(ButtonStyle.Primary)
       .setEmoji('gballemoji:1111733792772739192')

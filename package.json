@@ -7,7 +7,8 @@
     "canvas": "^2.11.2",
     "discord": "^0.8.2",
     "discord.js": "^14.11.0",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "tsx": "^3.12.7"
   },
   "name": "botgingaembeds",
   "version": "1.0.0",

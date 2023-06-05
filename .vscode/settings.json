@@ -1,25 +1,56 @@
 {
-  "workbench.iconTheme": "material-icon-theme",
-  "files.autoSave": "afterDelay",
-  "glassit-linux.opacity": 60,
   "workbench.colorTheme": "Unger Dark",
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": true,
+  "editor.fontSize": 14,
+  "editor.lineHeight": 24,
+  "editor.fontFamily": "Jetbrains Mono",
   "editor.fontLigatures": true,
-  "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",
-  "workbench.startupEditor": "none",
-  "editor.mouseWheelZoom": true,
-  "workbench.editor.untitled.hint": "hidden",
-  "editor.inlineSuggest.enabled": true,
-  "github.copilot.enable": {
-    "*": false,
-    "yaml": false,
-    "plaintex": false,
-    "markdown": false,
-    "python": true,
-    "javascript": true,
-    "html": true
+  // Aplica linhas verticais para lembrar de quebrar linha em códigos muito grandes
+  "editor.rulers": [
+    80,
+    120
+  ],
+  // Aplica um sinal visual na esquerda da linha selecionada
+  "editor.renderLineHighlight": "gutter",
+  "security.workspace.trust.untrustedFiles": "open",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.wordWrap": "on",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorCustomizations": {},
+  "breadcrumbs.showFiles": false,
+  "workbench.editor.closeOnFileDelete": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
   },
-  "workbench.productIconTheme": "Default"
-
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.fontWeight": "500",
+  "git.enableSmartCommit": true,
+  "editor.fontVariations": false,
+  "workbench.sideBar.location": "right",
+  "breadcrumbs.enabled": false,
+  "editor.minimap.enabled": false,
+  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairsHorizontal": true,
+  "telemetry.telemetryLevel": "off",
+  "html.format.wrapAttributes": "auto",
+  "html.format.wrapLineLength": 0,
+  "breadcrumbs.filePath": "off",
+  "outline.icons": false,
+  "editor.bracketPairColorization.enabled": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.editor.enablePreview": false,
+  "glassit.alpha": 220,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "vscode-pets.petSize": "medium",
+  "vscode-pets.petType": "crab",
+  "vscode-pets.theme": "forest",
+  "terminal.integrated.tabs.location": "left",
+  "terminal.integrated.fontFamily": "monospace",
+  "window.zoomLevel": 1,
+  "git.confirmSync": false,
+  "settingsSync.ignoredExtensions": []
 }

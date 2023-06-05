@@ -2,20 +2,19 @@ const { ActionRowBuilder } = require('@discordjs/builders');
 const { INTERACTION_IDS, COLORS } = require('../../constants');
 const { ButtonStyle, EmbedBuilder, ButtonBuilder } = require('discord.js');
 
-const option1_33 = async (interaction) => {
+const boPick3_1_1 = async (interaction) => {
   const embed = new EmbedBuilder()
     .setColor(COLORS.EMBEDCOLOR_GRAY)
-    .setTitle('``❔`` Como funciona o bolão?')
+    .setTitle('``❔`` Como conferir palpites?')
     .setDescription(
-      'O bolão é a competição mais conhecida do meio futebolístico e é a principal funcionalidade que foi integrada ao nosso bot, onde pode jogar com seus amigos. Saiba como funciona cada canal e como o bolão se integra a eles:\n\n⚽ `` #partidas `` Você clica no botão **“Palpitar”** para registrar sua previsão de placar.\n✅ `` #resultados `` Confira os resultados das partidas, súmula e estatísticas de erros e acertos de outros jogadores do bolão.\n🏆 `` #ranking `` Acompanhe sua posição no placar do servidor, veja o **top 10** e confira a **sua pontuação** e **últimos palpites**.' 
+      'Após palpitar, para conferir seus palpites vá para o canal `` #ranking ``, você terá acesso a **tabela** com a **pontuação** dos membros e suas posições, também o botão_ _ `` Meus palpites `` onde pode **conferir** seu histórico.' 
     );
 
   const components = new ActionRowBuilder().setComponents(
     new ButtonBuilder()
-      .setCustomId(INTERACTION_IDS.HOW_SELECTMENU.OPTION2_1)
-      .setLabel('Como palpitar?')
-      .setStyle(ButtonStyle.Primary)
-      .setEmoji('gballemoji:1111733792772739192')
+      .setCustomId(INTERACTION_IDS.HOW_SELECTMENU.BACKBOLAO3_1)
+      .setLabel('Voltar')
+      .setStyle(ButtonStyle.Secondary)
   );
 
   if (
@@ -36,4 +35,4 @@ const option1_33 = async (interaction) => {
   }
 };
 
-module.exports = { option1_33 };
+module.exports = { boPick3_1_1 };

@@ -34,6 +34,8 @@ const { removeCamp } = require('./src/Interactions/How/how.remove.it');
 const { option1_2 } = require('./src/Interactions/How/how.remLeague.it');
 const { removeCamp2 } = require('./src/Interactions/How/how.remove2.it');
 const { boPick3_1 } = require('./src/Interactions/How/how.bopick.it');
+const { boPick3_1_1 } = require('./src/Interactions/How/how.bolao2.it');
+const { option1_3 } = require('./src/Interactions/How/how.bolao.it');
 
 bot.on(Events.MessageCreate, (message) => {
   welcome(message);
@@ -136,8 +138,26 @@ bot.on(Events.InteractionCreate, async (interaction) => {
     ) {
       boPick3_1(interaction);
       console.log('Option 3.1');
-    } else if (interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION3_1_1) {
-      
+    } else if (
+      interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION3_1_1
+    ) {
+      boPick3_1_1(interaction);
+      console.log('Option 3.1.1');
+    } else if (
+      interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.BACKBOLAO
+    ) {
+      option1_3(interaction);
+      console.log('Option 3');
+    } else if (
+      interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION3_1_1
+    ) {
+      boPick3_1_1(interaction);
+      console.log('Option 3.1.1');
+    } else if (
+      interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.BACKBOLAO3_1
+    ) {
+      boPick3_1(interaction);
+      console.log('Option 3.1');
     }
   }
 });

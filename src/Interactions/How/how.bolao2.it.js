@@ -7,7 +7,7 @@ const boPick3_1_1 = async (interaction) => {
     .setColor(COLORS.EMBEDCOLOR_GRAY)
     .setTitle('``❔`` Como conferir palpites?')
     .setDescription(
-      'Após palpitar, para conferir seus palpites vá para o canal `` #ranking ``, você terá acesso a **tabela** com a **pontuação** dos membros e suas posições, também o botão_ _ `` Meus palpites `` onde pode **conferir** seu histórico.' 
+      'Após palpitar, para conferir seus palpites vá para o canal `` #ranking ``, você terá acesso a **tabela** com a **pontuação** dos membros e suas posições, também o botão_ _ `` Meus palpites `` onde pode **conferir** seu histórico.'
     );
 
   const components = new ActionRowBuilder().setComponents(
@@ -17,22 +17,11 @@ const boPick3_1_1 = async (interaction) => {
       .setStyle(ButtonStyle.Secondary)
   );
 
-  if (
-    interaction.isButton() &&
-    interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.BACKBOLAO
-  ) {
-    await interaction.update({
-      ephemeral: true,
-      embeds: [embed],
-      components: [components],
-    });
-  } else if (interaction.isStringSelectMenu()) {
-    await interaction.reply({
-      ephemeral: true,
-      embeds: [embed],
-      components: [components],
-    });
-  }
+  await interaction.update({
+    ephemeral: true,
+    embeds: [embed],
+    components: [components],
+  });
 };
 
 module.exports = { boPick3_1_1 };

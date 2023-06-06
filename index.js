@@ -149,11 +149,6 @@ bot.on(Events.InteractionCreate, async (interaction) => {
       option1_3(interaction);
       console.log('Option 3');
     } else if (
-      interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION3_1_1
-    ) {
-      boPick3_1_1(interaction);
-      console.log('Option 3.1.1');
-    } else if (
       interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.BACKBOLAO3_1
     ) {
       boPick3_1(interaction);

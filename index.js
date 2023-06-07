@@ -36,6 +36,8 @@ const { removeCamp2 } = require('./src/Interactions/How/how.remove2.it');
 const { boPick3_1 } = require('./src/Interactions/How/how.bopick.it');
 const { boPick3_1_1 } = require('./src/Interactions/How/how.bolao2.it');
 const { option1_3 } = require('./src/Interactions/How/how.bolao.it');
+const { option5_1 } = require('./src/Interactions/How/how.configrow.it');
+const { option1_5 } = require('./src/Interactions/How/how.config.it');
 
 bot.on(Events.MessageCreate, (message) => {
   welcome(message);
@@ -108,51 +110,73 @@ bot.on(Events.InteractionCreate, async (interaction) => {
       interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.BACKCRELEA
     ) {
       optionOne(interaction);
+      return;
     } else if (
       interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION1_2_1
     ) {
       removeCamp(interaction);
       console.log('Option 1.1.2.1');
+      return;
     } else if (
       interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.BACKCREATE2
     ) {
       options1_1_2(interaction);
       console.log('Option 1.1.2');
+      return;
     } else if (
       interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION2
     ) {
       option1_2(interaction);
       console.log('Option 1.2');
+      return;
     } else if (
       interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION2_1
     ) {
       removeCamp2(interaction);
       console.log('Option Remove Camp 2');
+      return;
     } else if (
       interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.BECKREMLEA
     ) {
       option1_2(interaction);
       console.log('Option 1.2');
+      return;
     } else if (
       interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION3_1
     ) {
       boPick3_1(interaction);
       console.log('Option 3.1');
+      return;
     } else if (
       interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION3_1_1
     ) {
       boPick3_1_1(interaction);
       console.log('Option 3.1.1');
+      return;
     } else if (
       interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.BACKBOLAO
     ) {
       option1_3(interaction);
       console.log('Option 3');
+      return;
     } else if (
       interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.BACKBOLAO3_1
     ) {
       boPick3_1(interaction);
       console.log('Option 3.1');
+      return;
+    } else if (
+      interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION5_1
+    ) {
+      option5_1(interaction);
+      console.log('Option 5.1');
+      return;
+    } else if (
+      interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.BACKCONFIG
+    ) {
+      option1_5(interaction);
+      console.log('Option 5.1');
+      return;
     }
   }
 });

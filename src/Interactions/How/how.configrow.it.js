@@ -14,8 +14,7 @@ const option5_1 = async (interaction) => {
     new ButtonBuilder()
       .setCustomId(INTERACTION_IDS.HOW_SELECTMENU.BACKCONFIG)
       .setLabel('Voltar')
-      .setStyle(ButtonStyle.Primary)
-      .setEmoji('⚽')
+      .setStyle(ButtonStyle.Secondary)
   );
 
   await interaction.update({

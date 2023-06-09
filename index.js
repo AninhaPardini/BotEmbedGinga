@@ -38,6 +38,7 @@ const { boPick3_1_1 } = require('./src/Interactions/How/how.bolao2.it');
 const { option1_3 } = require('./src/Interactions/How/how.bolao.it');
 const { option5_1 } = require('./src/Interactions/How/how.configrow.it');
 const { option1_5 } = require('./src/Interactions/How/how.config.it');
+const { option5_2 } = require('./src/Interactions/How/how.configcha.it');
 
 bot.on(Events.MessageCreate, (message) => {
   welcome(message);
@@ -170,6 +171,12 @@ bot.on(Events.InteractionCreate, async (interaction) => {
     ) {
       option5_1(interaction);
       console.log('Option 5.1');
+      return;
+    } else if (
+      interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.OPTION5_2
+    ) {
+      option5_2(interaction);
+      console.log('Option 5.2');
       return;
     } else if (
       interaction.customId === INTERACTION_IDS.HOW_SELECTMENU.BACKCONFIG

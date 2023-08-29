@@ -1,3 +1,15 @@
+![Banner do Readme]([https://raw.githubusercontent.com/AninhaPardini/images-for-github/main/Aninha%20Readme%20banner.png?token=GHSAT0AAAAAACGFH5SABQVWNQ4NHLHXM6F6ZHOMC5Q](https://raw.githubusercontent.com/AninhaPardini/images-for-github/main/image.png?token=GHSAT0AAAAAACGFH5SBF4PUPEVYDT5VKCDCZHOMHIA))
 # BotEmbedGinga
 
-É um bot que construi para fluxos de como usar o bot principal da empresa o Ginga, nele após enviar um comando no chat de texto ele fixa uma mensagem, onde construi com os seguintes temas: - Mensagem de como usar - Mensagem de FAQ com seleção de principais perguntas e um item para deixar uma sugestão - Mensagem de quando é recebido o input onde mostra o usuário e opção de reações da comunidade sobre o assunto.
+É um bot que construi para fluxos de como usar o bot principal da empresa o Ginga, nele após enviar um comando no chat de texto ele envia uma mensagem para todos verem com os tópicos:
+
+### Como usar
+![Como usar print](https://raw.githubusercontent.com/AninhaPardini/images-for-github/main/Como%20usar%20print.png?token=GHSAT0AAAAAACGFH5SBPK7INAEVRZQPEJRQZHOMMCQ)
+
+Nesta mensagem tem uma caixa de select onde ele terá um amplo fluxo de explicações das funcionalidades do bot Ginga.
+
+### FAQ
+![FAQ print](https://raw.githubusercontent.com/AninhaPardini/images-for-github/main/faq%20print.png?token=GHSAT0AAAAAACGFH5SBBF6UFH3N6RLUKEUQZHOMRYA)
+
+No faq o usuário pode encontrar uma pequena lista com as principais dúvidas e um select para enviar uma sugestão que aparecerá no #sugestoes
+![Sugestões msg](https://raw.githubusercontent.com/AninhaPardini/images-for-github/main/sugestoes%20msg.png?token=GHSAT0AAAAAACGFH5SB2NHPY3TAXL233CX4ZHOMWVA)

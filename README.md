@@ -1,4 +1,4 @@
-![Banner do Readme]([https://raw.githubusercontent.com/AninhaPardini/images-for-github/main/Aninha%20Readme%20banner.png?token=GHSAT0AAAAAACGFH5SABQVWNQ4NHLHXM6F6ZHOMC5Q](https://raw.githubusercontent.com/AninhaPardini/images-for-github/main/image.png?token=GHSAT0AAAAAACGFH5SBF4PUPEVYDT5VKCDCZHOMHIA))
+![Banner do Readme](https://raw.githubusercontent.com/AninhaPardini/images-for-github/main/image.png?token=GHSAT0AAAAAACGFH5SAMCXFQDIOR6CTMKLMZHOMZGQ)
 # BotEmbedGinga
 
 É um bot que construi para fluxos de como usar o bot principal da empresa o Ginga, nele após enviar um comando no chat de texto ele envia uma mensagem para todos verem com os tópicos:
